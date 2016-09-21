@@ -3,7 +3,7 @@ from random import randint
 BOARD_SIZE = 4
 NR_GUESSES = 4
 turn = 0
-
+#xtra comment
 
 #initializing board
 board = []
