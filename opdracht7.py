@@ -7,6 +7,8 @@ turn = 0
 
 #initializing board
 board = []
+rowList = []
+columnList = []
 
 for x in range(BOARD_SIZE):
  board.append(["O"] * BOARD_SIZE)
@@ -34,11 +36,33 @@ for turn in range(4) :
     if guess_row > 4:
         print("your row input is out of range")
 
+
     if guess_column > 4:
         print("your column input is out of range")
 
     if guess_row == ship_row:
         print("the row is guessed right")
+        #rowList.append(guess_row)
 
+    if guess_column == ship_col :
+        print("the column is guessed right")
+    #win if both the row and the column are guessed right
+    if guess_row == ship_row and guess_column == ship_col :
+        print("u won the game")
+        break
+
+    else:
+        if guess_row in rowList :
+            print("you already guessed this row")
+        if guess_column in columnList :
+            print("u already guessed this column")
+
+        else:
+            rowList.append(guess_row)
+            columnList.append(guess_column)
+
+
+    print(rowList)
+    print(columnList)
 if turn == NR_GUESSES-1:
  print ("Game Over")
