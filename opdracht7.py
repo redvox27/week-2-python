@@ -62,7 +62,6 @@ for turn in range(4) :
             columnList.append(guess_column)
 
 
-    print(rowList)
-    print(columnList)
+    
 if turn == NR_GUESSES-1:
  print ("Game Over")
