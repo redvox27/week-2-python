@@ -1,18 +1,25 @@
+startWaarde = 2
+eindWaarde = 6
+deler = 1
+testresultaat = 0
+testLijst = []
+delerLijst = []
+
+while startWaarde <= eindWaarde :
+    testresultaat = startWaarde / deler
+    if testresultaat == isinstance(testresultaat,int) :
+        testLijst.append(testresultaat)
+    delerLijst.append(deler)
 
 
-def perfectInt() :
-    startGetal = 6
-    deler = 1
-    testResult = 0
-
-    while testResult <= startGetal :
-        testResult = startGetal / deler
-        print(testResult)
-        deler +1
-        if testResult == startGetal :
-            break
+    if deler == startWaarde +1:
+        startWaarde =  startWaarde +1
+        deler = 2
+        testLijst = []
 
 
-    print(testResult)
+    else:
+        deler = deler +1
 
-perfectInt()
+    print("startwaarde:",startWaarde,"deler: ", deler,"testres: ", testresultaat , testLijst, delerLijst)
+
