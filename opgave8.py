@@ -7,19 +7,19 @@ delerLijst = []
 
 while startWaarde <= eindWaarde :
     testresultaat = startWaarde / deler
-    print(startWaarde)
+    print("startwaarde: ",startWaarde)
+    print("deler: ",deler)
+    print("testresultaat: ", testresultaat)
     testLijst.append(testresultaat)
-    delerLijst.append(deler)
 
-
-    if deler == startWaarde :
-        startWaarde =  startWaarde +1
+    if deler == startWaarde:
+        startWaarde = startWaarde +1
         deler = 1
-        testLijst = []
+
 
 
     else:
-        deler = deler +1
-        startWaarde = startWaarde
-    print("startwaarde:",startWaarde,"deler: ", deler,"testres: ", testresultaat )
+        deler = deler + 1
+
+
 
