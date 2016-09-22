@@ -1,4 +1,4 @@
-startWaarde = 2
+startWaarde = 1
 eindWaarde = 6
 deler = 1
 testresultaat = 0
@@ -7,19 +7,19 @@ delerLijst = []
 
 while startWaarde <= eindWaarde :
     testresultaat = startWaarde / deler
-    if testresultaat == isinstance(testresultaat,int) :
-        testLijst.append(testresultaat)
+    print(startWaarde)
+    testLijst.append(testresultaat)
     delerLijst.append(deler)
 
 
-    if deler == startWaarde +1:
+    if deler == startWaarde :
         startWaarde =  startWaarde +1
-        deler = 2
+        deler = 1
         testLijst = []
 
 
     else:
         deler = deler +1
-
-    print("startwaarde:",startWaarde,"deler: ", deler,"testres: ", testresultaat , testLijst, delerLijst)
+        startWaarde = startWaarde
+    print("startwaarde:",startWaarde,"deler: ", deler,"testres: ", testresultaat )
 
