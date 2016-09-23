@@ -12,34 +12,40 @@ def validCheck(cardNumber):
     n = 1
     cardNumber = cardNumber[::-1]
     cardNumber =[cardNumber[i:i + n] for i in range(0, len(cardNumber), n)]
-    print(cardNumber)
+    #print(cardNumber)
     cardNumber = [int(i) for i in cardNumber]
-    print(cardNumber)
+    #print(cardNumber)
 
     unevenList = cardNumber[1::2] #start, stop, step // de start is eerste index, stop = einde list, step = 2 dus de uneven indexes
-    print("unevenList: ",unevenList)
+    #print("unevenList: ",unevenList)
 
     evenList = cardNumber[0::2]
-    print("evenList: ", evenList)
+    #print("evenList: ", evenList)
 
     unevenResult = sum(unevenList) #som van values in list
-    print(unevenResult)
+    #print(unevenResult)
 
     multiply = [x * 2 for x in evenList]
-    print(multiply)
+    multiplySub = []
+    for x in multiply:
+        if x > 10:
+           x= x- 9
 
+        multiplySub.append(x)
+
+    multiplySub = sum(multiplySub)
+    #print(multiplySub)
+    checkNumber= multiplySub + unevenResult
+    #print(checkNumber)
+
+    if checkNumber % 5 == 0 :
+        print("card is valid")
+    else :
+        print("card invalid")
     #kijk voor x in lijst, als die groter is dan 10, doe je x min negen
 
-    for x in multiply:
-        if x > 10 :
-            multiply.remove(x)
-
-    print(multiply)
 
 
 
 
-
-
-
-validCheck(validCard)
+validCheck(invalidCard)
