@@ -25,6 +25,21 @@ def validCheck(cardNumber):
     unevenResult = sum(unevenList) #som van values in list
     print(unevenResult)
 
+    multiply = [x * 2 for x in evenList]
+    print(multiply)
+
+    #kijk voor x in lijst, als die groter is dan 10, doe je x min negen
+
+    for x in multiply:
+        if x > 10 :
+            multiply.remove(x)
+
+    print(multiply)
+
+
+
+
+
 
 
 validCheck(validCard)
