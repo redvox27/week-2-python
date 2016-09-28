@@ -36,7 +36,7 @@ def validCheck(cardNumber):
     multiplySub = sum(multiplySub)
     #print(multiplySub)
     checkNumber= multiplySub + unevenResult
-    #print(checkNumber)
+    print(checkNumber)
 
     if checkNumber % 5 == 0 :
         print("card is valid")
@@ -46,6 +46,6 @@ def validCheck(cardNumber):
 
 
 
-#
 
-validCheck(invalidCard)
+
+validCheck(validCard)
