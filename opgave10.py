@@ -47,5 +47,8 @@ def validCheck(cardNumber):
 
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 validCheck(validCard)
