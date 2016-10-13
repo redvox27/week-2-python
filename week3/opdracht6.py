@@ -1,4 +1,7 @@
-
+from sys import exit
+from itertools import chain
+import numpy as np
+#matrix = np.arange(9).reshape(3, 3
 
 
 NONE = '.'
@@ -33,6 +36,31 @@ class Game:
            print(' '.join(str(self.board[x][y]) for x in range(self.cols)))
        print()
 
+   def get_winner(self):
+       # mirrir_board = [list(r[::1)]
+       transposed_board = self.board.transpose()
+       cols = self.board.tolist()
+       rows = transposed_board.tolist()
+       posdiag = [list(np.diagonal(self.board, i)) for i in range(-2, 3)]
+       print(posdiag, '\n')
+       negdiag = [list(np.diagonal(self.board.fliplr, i)) for i in range(-2, 3)]
+       print(negdiag, '\n')
+       all = (cols, rows, posdiag, negdiag)
+       for lst in chain(*all):  # for every list in the chain
+           red_counter = 0
+           yellow_counter = 0
+           for i in lst:
+               if i == 'R':
+                   yellow_counter = 0
+                   red_counter += 1
+               if i == 'Y':
+                   red_counter = 0
+                   yellow_counter += 1
+               if red_counter == 4:
+                   return 'R'
+               if yellow_counter == 4:
+                   return 'Y'
+
 if __name__ == '__main__':
    g = Game()
    turn = RED
@@ -43,6 +71,8 @@ if __name__ == '__main__':
        try:
            g.insert(int(row), turn)
            turn = YELLOW if turn == RED else RED
+           g.get_winner()
        except Exception:
            print("\n DIT KEN NIET\n\n")
+
 

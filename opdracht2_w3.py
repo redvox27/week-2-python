@@ -3,7 +3,7 @@ class stack:
 
         self.elements = []
 
-    def  is_empty(self):
+    def is_empty(self):
         if self.elements == [] :
             print("elements is leeg ")
         else:
@@ -19,7 +19,6 @@ class stack:
         print("the following element has been removed: ",self.elements[-1])
 
         self.elements.remove(self.elements[-1])
-
 
     def getSize(self):
         if self.elements == [] :
