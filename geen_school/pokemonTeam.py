@@ -24,7 +24,7 @@ def pokemonTeam():
         if type1 == pokemonTypeList[0]: #the type is fairy
             weakness1 = ["poison, steel "]
 
-        if type1 == pokemonTypeList[1]: #the type is steel
+        elif type1 == pokemonTypeList[1]: #the type is steel
             weakness1 = "fire, fight, ground"
 
 
@@ -47,7 +47,7 @@ def pokemonTeam():
 
     i = 0
     while i < 2:
-        print("pokemon: ",finalPokemonList[i], "type1: ",finalTypeList1[i], "type2: ",finalTypeList2[i],"weakness(es): ",outputWeaknessList[0] )
+        print("pokemon: ",finalPokemonList[i], "type1: ",finalTypeList1[i], "type2: ",finalTypeList2[i], )
 
         i = i+1
 
