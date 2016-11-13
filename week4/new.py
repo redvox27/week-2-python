@@ -109,7 +109,7 @@ class Graph :
 
 
 
-
+#eefefgef
 
 root = Tk()
 gui = Graph(root)
